@@ -22,14 +22,13 @@ $(document).on('ready', function() {
 
 
 // //  create listener just for form update
+
  	$('form').on('submit',function(e) {
- 		
- 		console.log(this);
- 		
- 		var storeClass = $('input.name').class();
- 		console.log(storeClass);
+ 		//console.log($('form'));	
+ 		var storeClass = $('input.name').class;
+ 		//console.log(storeClass);
  		var storeText = $('input.name').val();
-  		console.log(storeText);
+  		//console.log(storeText);
   	 	//update profile to text from form
   		$('.profile.storeClass').val(storeText);
   		e.preventDefault();
