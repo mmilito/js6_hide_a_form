@@ -1,0 +1,43 @@
+/* Main CSS for JS6 Hide a Form
+*/
+body {
+	font-family: arial;
+	font-size: 12pt;
+}
+form {
+	border: .1em solid red;
+	margin: 1em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	padding-left: 1em;
+}
+form input {
+	width: 20em;
+	margin: .1em;
+	padding-top:.2em;
+	padding-left: 2em;
+}
+form .submit_button {
+	margin-left:5em;
+	margin-top: 3em;
+	background-color: palegreen;
+}
+.button_show {
+	background-color: yellow;
+	text-align: center;
+	width: 9em;
+	height: 3em;
+}
+
+.button_hide {
+	background-color: red;
+/*	text-align: center;
+	width: 9em;
+	height: 3em;*/
+}
+.form_toggle {
+	display: none;
+}
+.profile {
+	position:relative;
+}

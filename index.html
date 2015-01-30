@@ -2,11 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Untitled</title>
+  <title>JS6 Hide in Place</title>
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
 	
+	<h1>JS6 Hide in Place</h1>
+
+		<div class="page_container">
+		<h3>User Entry Form</h3>
+			<p> Click the button to reveal and hide the form when you're done.</p>
+
+			<button class="button_show">Show Form</button>
+
+			<form class="user_form form_toggle">
+				<label>Do your data entry here ...</label><br>
+				Name   <input class="name" type="text" name="name"><br>
+				Bio   <input class="bio" type="text" name="bio"><br>
+				Favorite Books   <input class="books" type="text" name="books"><br>
+				Favorite JS Libraries   <input class="js_lib" type="text" name="js_lib">
+				<input class="submit_button" type="submit" value="Go!">
+			</form>
+
+			<h4>Profile Info</h4>
+				<div class="profile">
+					<p>Name: <span class="name">Jane Doe</span></p>
+					<p>Bio: <span class="bio">94 years old</span></p>
+					<p>Favorite Books: <span class="books">Agatha Christie</span></p>
+					<p>Favorite JS Libraries: <span class="js_lib">whatever.js</span></p>	
+
+		</div>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="main.js"></script>
 
