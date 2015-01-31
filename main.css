@@ -3,6 +3,7 @@
 body {
 	font-family: arial;
 	font-size: 12pt;
+	padding-left: 3em;
 }
 form {
 	border: .1em solid red;
@@ -12,6 +13,7 @@ form {
 	padding-left: 1em;
 }
 form input {
+	display: inline-block;
 	width: 20em;
 	margin: .1em;
 	padding-top:.2em;
@@ -19,7 +21,6 @@ form input {
 }
 form .submit_button {
 	margin-left:5em;
-	margin-top: 3em;
 	background-color: palegreen;
 }
 .button_show {
@@ -31,13 +32,23 @@ form .submit_button {
 
 .button_hide {
 	background-color: red;
-/*	text-align: center;
-	width: 9em;
-	height: 3em;*/
 }
 .form_toggle {
 	display: none;
 }
-.profile {
-	position:relative;
+.form_pair p {
+	display: inline-block;
+	border: 1px solid gray;
+	/*position:absolute;*/
+	padding-left: 10px;
+	margin-left: 10px;
+	width: 30em;
+	min-height: 1emx;
+}
+.form_pair .title {
+	display: inline-block;
+	width:  10em;
+	height: 1em;
+	/*float:left;*/
+	/*border:1px solid black;*/
 }

@@ -1,61 +1,44 @@
 // Main JS for JS6 Hide a Form
 
-//$('form').hide()
-
 
 $(document).on('ready', function() {
 
-// // shows form
+// // show/hide form via toggling some classes 
  	$('button').on('click',function() {
  		//console.log(this);
- 		$('button').toggleClass("button_hide");
- 		//console.log($('button').hasClass("button_hide"));
- 		 if ($('button').hasClass("button_hide")) { 
- 		 	$('button').text("Show Form");	
+ 		$(this).toggleClass("button_hide");
+ 		//console.log($(this).hasClass("button_hide"),"buttonHide");
+ 		 if ($(this).hasClass("button_hide")) { 
+ 		 	$(this).text("Hide Form");	
  		// 	console.log(this);
  		 	} else {
- 		 		$('button').text("Hide Form");
- 		};
+ 		 		$(this).text("Show Form");
+ 		}
  		$('form').toggleClass('form_toggle');
+ 		//console.log("past show/hide form")
  	});
-
-
+ 
 
 // //  create listener just for form update
-
  	$('form').on('submit',function(e) {
- 		//console.log($('form'));	
- 		var storeClass = $('input.name').class;
- 		//console.log(storeClass);
- 		var storeText = $('input.name').val();
-  		//console.log(storeText);
-  	 	//update profile to text from form
-  		$('.profile.storeClass').val(storeText);
-  		e.preventDefault();
+ 		e.preventDefault();
+ 		//console.log("starting form listener")
+		 		
+ 		var childrenList=$(this).children('input').not('.submit_button');
+ 		//console.log(childrenList);
+ 		childrenList.each(function(){
+ 			var childClass = $(this).attr('class');
+			var childVal = $(this).val();
+			$('.form_pair .'+childClass).text(childVal);
+			//console.log("child:",childClass);
+ 		});
+ 		//clear form submission fields when written away
+ 		 childrenList.each(function(){
+ 		 	childrenList.val('');
+ 		 })
  	});
 
-// // toggle form class on hide button only
-// 	$('.button_show').on('click', function(){
-// 		$('form').toggleClass('form_toggle');
-// 	});
-
-
-// // to handle form submission
-// 	$('input').on('blur',function() {
-// 		console.log("working");
-// 		//return false;
-// 	var storeText = $('.name').val();
-// 		console.log(storeText);
-	
-// 	var storeClass = $(this).class();
-// 		console.log(storeClass);
-// 	//update profile to text from form
-// 	$('.profile.storeClass').val(storeText);
-
-
-
-// 	});
-
+ 
 
 
 // page close DO NOT DELETE  
